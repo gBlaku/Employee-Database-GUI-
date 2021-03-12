@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="584.0" maxWidth="756.0" minHeight="584.0" minWidth="756.0" prefHeight="584.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <TabPane prefHeight="402.0" prefWidth="756.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
@@ -149,7 +149,7 @@
                               </HBox>
                               <HBox prefHeight="43.0" prefWidth="105.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <children>
-                                    <TextField>
+                                    <TextField fx:id="employeeName">
                                        <HBox.margin>
                                           <Insets left="5.0" top="10.0" />
                                        </HBox.margin>
