@@ -20,10 +20,11 @@ public class Date implements Comparable<Date> {
 	 * @param date in a "mm/dd/yyyy" string format
 	 */
 	public Date(String date) {	//taking mm/dd/yyyy and create a Date object
-		StringTokenizer tokenizer = new StringTokenizer(date, "/");
+		StringTokenizer tokenizer = new StringTokenizer(date, "-");
+		this.year  = Integer.parseInt(tokenizer.nextToken());
 		this.month = Integer.parseInt(tokenizer.nextToken());
 		this.day   = Integer.parseInt(tokenizer.nextToken());
-		this.year  = Integer.parseInt(tokenizer.nextToken());	
+			
 		
 	} 
 	
@@ -32,9 +33,10 @@ public class Date implements Comparable<Date> {
 	 */
 	public Date() { 
 		Calendar today = Calendar.getInstance();
-		this.month = today.get(Calendar.MONTH);
-		this.day   = today.get(Calendar.DATE);
 		this.year  = today.get(Calendar.YEAR);
+		this.month = today.get(Calendar.MONTH)+1;
+		this.day   = today.get(Calendar.DATE);
+		
 		
 	} //create an object with today’s date (see Calendar class)
 	
@@ -69,36 +71,47 @@ public class Date implements Comparable<Date> {
 	 * @return true if the date is valid, false if it is not
 	 */
 	public boolean isValid() { 
+		//System.out.println(this.toString());
 		if (this.day < 1) {
 			return false;
 		}
 		
 		
 		if (this.year < MINYEAR) {
+			
 			return false;		
 		}
 		
 		if (this.month > MAXMONTH) {
+			
 			return false;
 		}
 		else if (this.month<MINMONTH) {
+			
 			return false;
 		}
 		
 		Date today = new Date();
 		if (this.year > today.year) {
+			
 			return false;
 		}
 		else if (this.year == today.year) {
+			
 			if (this.month > today.month ) {
+				//System.out.println(this.month);
+				//System.out.println(today.month);
+				//System.out.println(today.toString());
 				return false;
 			}
 			else if (this.month == today.month) {
+				
 				if (this.day > today.day) {
 					return false;
 				}
 			}
 		}
+		
 		
 		if (this.month == Months.JANUARY) {
 			if (this.day > Months.MaxDaysPerMonth(Months.JANUARY)) {
@@ -164,6 +177,7 @@ public class Date implements Comparable<Date> {
 				return false;
 			}
 		}
+		
 		return true;
 	}
 	

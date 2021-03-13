@@ -1,16 +1,18 @@
 package application;
 	
-import java.io.IOException; 
+import java.io.IOException;  
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-//import view.Controller;
+//import View.Controller;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
+import application.Controller;
 
+ 
 
 
 public class Main extends Application {
@@ -18,6 +20,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			
+//			Controller controller = loader.getController();
+//			controller.setMainStage(primaryStage);
 			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("View.fxml"));
 			Scene scene = new Scene(root,400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
