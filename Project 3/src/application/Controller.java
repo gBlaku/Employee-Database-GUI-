@@ -441,4 +441,42 @@ public class Controller {
 	}
 	
 	
+	
+	@FXML
+	private void computePayments() {
+		if (listCheck() == false) {
+			company.processPayments();
+			outputArea.appendText("Payments calculated.\n");
+		}
+		
+	}
+		
+	
+	
+	
+	
+	
+	@FXML
+	private void print() {
+		if (listCheck() == false) {
+			outputArea.appendText("--Printing earning statements for all employees--\n");
+			company.print(outputArea);
+		}
+	}
+	
+	@FXML
+	private void printByDep() {
+		if (listCheck() == false) {
+			outputArea.appendText("--Printing earning statements by department--\n");
+			company.printByDepartment(outputArea);
+		}
+	}
+	
+	@FXML
+	private void printByDateHired() {
+		if (listCheck() == false) {
+			outputArea.appendText("--Printing earning statements by date hired--\n");
+			company.printByDate(outputArea);
+		}
+	}
 }

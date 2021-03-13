@@ -1,4 +1,7 @@
 package application;
+
+import javafx.scene.control.TextArea;
+
 /**
  * A class that simulates the functionality of a company's register of employees.
  * @author Abdullah Salem, Gent Blaku
@@ -197,10 +200,10 @@ public class Company {
 	/**
 	 * A method that prints the contents of the Company's array in a list
 	 */
-	public void print() {
+	public void print(TextArea outputArea) {
 		for (int i = 0; i < numEmployee; i++) {
 			if (employList[i] != null) {
-				System.out.println(employList[i].toString());
+				outputArea.appendText(employList[i].toString() + "\n");
 			}
 		}
 	}//print earning statements for all employees
@@ -208,17 +211,17 @@ public class Company {
 	/**
 	 * A method that prints the contents of the Company's array in a list ordered by Department
 	 */
-	public void printByDepartment() {
+	public void printByDepartment(TextArea outputArea) {
 		this.sortByDepartment();
-		this.print();
+		this.print(outputArea);
 	} //print earning statements by department
 	
 
 	/**
 	 * A method that prints the contents of the Company's array in a list ordered by date(ascending)
 	 */
-	public void printByDate() {
+	public void printByDate(TextArea outputArea) {
 		this.sortByDate();
-		this.print();
+		this.print(outputArea);
 	} //print earning statements by date hired
 }

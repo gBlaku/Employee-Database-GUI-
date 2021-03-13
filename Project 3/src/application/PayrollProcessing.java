@@ -220,7 +220,7 @@ public class PayrollProcessing {
 			return;
 		}
 		System.out.println("--Printing earning statements for all employees--");
-		company.print();
+		//company.print();
 	}
 	
 	/**
@@ -233,7 +233,7 @@ public class PayrollProcessing {
 			return;
 		}
 		System.out.println("--Printing earning statements by date hired--");
-		company.printByDate();
+		//company.printByDate(outputArea);
 	}
 	
 	/**
@@ -246,7 +246,7 @@ public class PayrollProcessing {
 			return;
 		}
 		System.out.println("--Printing earning statements by department--");
-		company.printByDepartment();
+	//	company.printByDepartment();
 	}
 	
 	/**
