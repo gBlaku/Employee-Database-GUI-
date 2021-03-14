@@ -246,7 +246,6 @@ public class Controller {
 	
 	/**
 	 * This function is triggered when picking Parttime radio button. Disables irrelevant input options that are impossible for a parttime employee to possess (e.g annual salary)
-	 * @param event Clicking the Parttime radio button.
 	 */
 	@FXML
 	private void pickedParttime() {
@@ -265,7 +264,6 @@ public class Controller {
 	}
 	/**
 	 * This function is triggered when picking Fulltime radio button. Disables irrelevant input options that are impossible for a Fulltime employee to possess (e.g hourly rate, hours worked)
-	 * @param event Clicking the Fulltime radio button.
 	 */
 	@FXML
 	private void pickedFulltime() {
@@ -285,7 +283,6 @@ public class Controller {
 	
 	/**
 	 * This function is triggered when picking Management radio button. Disables irrelevant input options that are impossible for a Management employee to possess (e.g hourly rate, hours worked)
-	 * @param event Clicking the Management radio button.
 	 */
 	@FXML
 	private void pickedManagement() {

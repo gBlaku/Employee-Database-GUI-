@@ -48,7 +48,7 @@ public class Profile {
 	
 	/**
 	* Overriding the toString method of inherited from the object class.
-	* @returns a string representing this object
+	* @return a string representing this object
 	*/
 	@Override
 	public String toString() { 

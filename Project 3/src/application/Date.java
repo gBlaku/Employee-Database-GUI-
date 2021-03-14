@@ -44,7 +44,7 @@ public class Date implements Comparable<Date> {
 	
 	/**
 	 * A helper method to verify if a year was a leap year
-	 * @param bookYear to be checked
+	 * @param hireYear to be checked
 	 * @return true if it is a leapyear, false if not
 	 */
 	private boolean checkForLeapYear(int hireYear) {
@@ -257,7 +257,7 @@ public class Date implements Comparable<Date> {
 	
 	/**
 	 * Overriding the toString method of inherited from the object class.
-	 * @returns a string representing this object
+	 * @return a string representing this object
 	 */
 	@Override
 	public String toString() {
