@@ -218,7 +218,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <MenuButton fx:id="printButton" layoutX="764.0" layoutY="199.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="185.0" text="Print">
+                        <MenuButton fx:id="printButton" layoutX="715.0" layoutY="262.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="185.0" text="Print">
                           <items>
                             <MenuItem fx:id="menuPrint" mnemonicParsing="false" onAction="#print" text="Print" />
                             <MenuItem fx:id="menuPrintByDep" mnemonicParsing="false" onAction="#printByDep" text="Print By Department" />
@@ -228,7 +228,7 @@
                               <Font size="36.0" />
                            </font>
                         </MenuButton>
-                        <Button fx:id="computePaymentButton" layoutX="517.0" layoutY="480.0" mnemonicParsing="false" onMouseClicked="#computePayments" prefHeight="79.0" prefWidth="185.0" text="Compute Payments">
+                        <Button fx:id="computePaymentButton" layoutX="418.0" layoutY="438.0" mnemonicParsing="false" onMouseClicked="#computePayments" prefHeight="79.0" prefWidth="185.0" text="Compute Payments">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -257,11 +257,6 @@
                   <Insets bottom="5.0" />
                </HBox.margin>
             </TextArea>
-            <Button fx:id="clearButton" mnemonicParsing="false" prefHeight="48.0" prefWidth="105.0" text="CLEAR">
-               <HBox.margin>
-                  <Insets left="20.0" top="140.0" />
-               </HBox.margin>
-            </Button>
          </children>
          <padding>
             <Insets left="135.0" />

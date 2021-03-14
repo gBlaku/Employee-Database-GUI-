@@ -58,6 +58,9 @@ public class Controller {
 			outputArea.appendText("File not found.\n");
 			return;
 		}
+		catch(Exception e) {
+			return;
+		}
 		
 		StringTokenizer tokens;
 		String tokensArray[];
