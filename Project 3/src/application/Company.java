@@ -1,5 +1,8 @@
 package application;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 import javafx.scene.control.TextArea;
 
 /**
@@ -169,7 +172,7 @@ public class Company {
 	} //maintain the original sequence
 	
 	/**
-	 * 
+	 * A method that sets hours for a parttime employee.
 	 * @param employee is the part-time employee with their new hours
 	 * @return true if hours are changed, false if not
 	 */
@@ -217,6 +220,7 @@ public class Company {
 	} //print earning statements by department
 	
 
+	
 	/**
 	 * A method that prints the contents of the Company's array in a list ordered by date(ascending)
 	 */
@@ -224,4 +228,23 @@ public class Company {
 		this.sortByDate();
 		this.print(outputArea);
 	} //print earning statements by date hired
+	
+	
+	
+	/**
+	 * A method that exports the company database into a txt file, employeeDatebase.txt
+	 */
+	
+	public void exportDatabase() {
+		try {
+			FileWriter writer = new FileWriter("employeeDatabase.txt");
+			for (int i=0; i<numEmployee; i++) {
+				writer.write(employList[i].toString() +"\n");
+			}
+			writer.close();
+		}
+		catch(IOException e){
+			
+		}
+	}
 }

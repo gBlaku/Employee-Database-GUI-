@@ -17,7 +17,7 @@ public class Date implements Comparable<Date> {
 	
 	/**
 	 * Creates a object of the Date Class
-	 * @param date in a "mm/dd/yyyy" string format
+	 * @param date in a "yyyy-mm-dd" string format
 	 */
 	public Date(String date) {	//taking mm/dd/yyyy and create a Date object
 		StringTokenizer tokenizer = new StringTokenizer(date, "-");

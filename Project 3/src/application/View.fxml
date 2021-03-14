@@ -145,7 +145,7 @@
                                     </RadioButton>
                                  </children>
                               </HBox>
-                              <DatePicker fx:id="dateHired" prefHeight="25.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <DatePicker fx:id="dateHired" editable="false" prefHeight="25.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets left="5.0" />
                                  </GridPane.margin>
@@ -192,24 +192,24 @@
                                     <Insets left="170.0" right="45.0" />
                                  </GridPane.margin>
                               </HBox>
-                              <Label text="Manger Role" GridPane.rowIndex="6">
+                              <Label text="Management Role" GridPane.rowIndex="6">
                                  <GridPane.margin>
-                                    <Insets left="230.0" />
+                                    <Insets left="200.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Button fx:id="addEmployeeButton" mnemonicParsing="false" onAction="#onMouseClick" prefHeight="25.0" prefWidth="126.0" text="Add Employee" GridPane.rowIndex="7">
+                              <Button fx:id="addEmployeeButton" disable="true" mnemonicParsing="false" onAction="#onMouseClick" prefHeight="25.0" prefWidth="126.0" text="Add Employee" GridPane.rowIndex="7">
                                  <GridPane.margin>
                                     <Insets bottom="-20.0" left="150.0" />
                                  </GridPane.margin>
                               </Button>
-                              <Button fx:id="removeEmployeeButton" mnemonicParsing="false" onAction="#remove" prefHeight="25.0" prefWidth="126.0" text="Remove Employee" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                              <Button fx:id="removeEmployeeButton" disable="true" mnemonicParsing="false" onAction="#remove" prefHeight="25.0" prefWidth="126.0" text="Remove Employee" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                  <GridPane.margin>
                                     <Insets bottom="-20.0" left="165.0" />
                                  </GridPane.margin>
                               </Button>
                            </children>
                         </GridPane>
-                        <Button fx:id="setHoursButton" layoutX="616.0" layoutY="225.0" mnemonicParsing="false" onAction="#setHours" prefHeight="25.0" prefWidth="115.0" text="Set Hours" />
+                        <Button fx:id="setHoursButton" disable="true" layoutX="616.0" layoutY="225.0" mnemonicParsing="false" onAction="#setHours" prefHeight="25.0" prefWidth="115.0" text="Set Hours" />
                      </children>
                   </AnchorPane>
             </content>
@@ -233,6 +233,16 @@
                               <Font size="18.0" />
                            </font>
                         </Button>
+                        <Button fx:id="importButton" layoutX="168.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#importDatabase" prefHeight="89.0" prefWidth="206.0" text="Import">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="exportButton" layoutX="168.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#exportDatabase" prefHeight="92.0" prefWidth="206.0" text="Export">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -240,7 +250,7 @@
       </TabPane>
    </center>
    <bottom>
-      <HBox prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="213.0" prefWidth="1204.0" BorderPane.alignment="CENTER">
          <children>
             <TextArea fx:id="outputArea" prefHeight="198.0" prefWidth="693.0">
                <HBox.margin>
